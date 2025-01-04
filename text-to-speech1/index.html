@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Text to Speech</title>
+  <link rel="stylesheet" href="style.css">
+ <!--<script src="script.js"></script> -->
+</head>
+<body>
+
+<div class="body">
+  <center>
+<div class="head"> 
+  <h1>Text To Speech<b> Converter</b></h1>
+</div>
+    <textarea class="textarea" placeholder="Write here to speak out load..."></textarea>
+    <div class="bottom">
+     <select></select>
+<button class="button">▶ Play</button>
+</center>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script>
+  let speech = new SpeechSynthesisUtterance(); 
+  
+document.querySelector("button").addEventListener("click",() => {
+  speech.text = document.querySelector("textarea").value; 
+window.speechSynthesis.speak(speech); 
+  
+});
+
+</script>
+
+</body>
+</html>
